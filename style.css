@@ -8,7 +8,16 @@
 	text-align: center;
 }
 
-.col-centered{
+.col-centered {
 float: none;
 margin: 0 auto;
+text-align: center;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.verticalLine {
+	border-right: solid #000000;
 }
