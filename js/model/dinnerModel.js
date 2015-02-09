@@ -59,12 +59,12 @@ var DinnerModel = function() {
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 2
 		var count = 0;
-		for(i = 0; i < menu.length ; i++){
-			for(j = 0; j < menu[i].ingredients.length ; j++){
-				count += menu[i].ingredients[j].price * numGuests;
-			}
-		}
+		var allIngredients = this.getAllIngredients();
 		
+		for(i = 0; i < allIngredients.length ; i++){
+			count += allIngredients[i].price * numGuests;
+		}
+				
 		return count;
 	}
 
