@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>Home</title>
+
+    <!-- Bootstrap CSS -->
+	<!-- test -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+	<div class="container-fluid">
+		<!-- header -->
+		<div class="container-fluid" style="border: 3px solid black">
+			<div class="row">
+				<div class="col-md-3">
+					<h1>HOMELETTE</h1>
+				</div>
+				<div class="col-md-9">
+					<h5><i>From the best chefs in the world directly into your kitchen</i></h5>
+				</div>
+			</div>
+		</div>
+		<!-- body -->
+		<div class="row" style="border: 3px solid black">
+			<!-- left panel -->
+			<div class="col-md-2" style="border: 3px solid black">
+				<div class="row">
+					<h5>My Dinner</h5>
+				</div>
+				<div class="row">
+					People:
+					<input type="number" value="3">
+				</div>
+				<div class="row">
+					<table class="table table-striped">
+						<tr>
+							<th>Dish name</th>
+							<th>Cost</th>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Total SEK</td>
+						</tr>
+					</table>
+					<input class="btn btn-default" type="submit" value="Confirm Dinner">
+				</div>
+			</div>
+			<!-- right panel -->
+			<div class="col-md-10" style="border: 3px solid black">
+				<!-- top row -->
+				<div class="row" style="border: 3px solid black">
+					<h5>SELECT DISH</h5>
+					<hr>
+					<form class="form-inline"<>
+						<div class="form-group">
+							<input type="search" class="form-control" placeholder="Enter key words">
+						</div>
+						<div class="form-group">
+							<input class="btn btn-default" type="submit" value="Search">
+						</div>
+						<div class="form-group">
+							<div class="dropdown">
+						  		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+						  			Dropdown
+						  			<span class="caret"></span>
+					  			</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- bottom row -->
+				<div class="row" style="border: 3px solid black">
+					<div class="col-md-2">
+						<a href="#" class="thumbnail">
+							<img src="images/toast.jpg" alt="...">
+						</a>
+						<div class="caption">
+							<a href="#"><h5>Toast</h5></a>
+							<p>Crunchy</p>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<a href="#" class="thumbnail">
+							<img src="images/sourdough.jpg" alt="...">
+						</a>
+						<div class="caption">
+							<a href="#"><h5>Sourdough</h5></a>
+							<p>What is this</p>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<a href="#" class="thumbnail">
+							<img src="images/meatballs.jpg" alt="...">
+						</a>
+						<div class="caption">
+							<a href="#"><h5>Meatballs</h5></a>
+							<p>Delicious</p>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<a href="#" class="thumbnail">
+							<img src="images/icecream.jpg" alt="...">
+						</a>
+						<div class="caption">
+							<a href="#"><h5>Ice cream</h5></a>
+							<p>Glass in Swedish</p>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<a href="#" class="thumbnail">
+							<img src="images/bakedbrie.jpg" alt="...">
+						</a>
+						<div class="caption">
+							<a href="#"><h5>Baked Brie</h5></a>
+							<p>Yum</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/exampleView.js"></script>
+	<script src="js/view/exampleViewController.js"></script>
+  </body>
+</html>
