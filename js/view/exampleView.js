@@ -88,7 +88,7 @@ var ExampleView = function (container,model) {
 		 cell2.innerHTML = model.getDish(id).ingredients[i].price;
 	 }
 	 
-	 this.totalCost.html(model.getDishCost(2));
+	 this.totalCost.html(model.getDishCost(1));
 	 }
  }
  
