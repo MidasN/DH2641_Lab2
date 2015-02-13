@@ -12,7 +12,7 @@
   <body>
 	<div class="container-fluid">
 		<!-- header -->
-		<div class="container-fluid" style="border: 3px solid black">
+		<div class="container-fluid" style="border: 3px solid black" id="leftDishList">
 			<div class="row">
 				<div class="col-md-3">
 					<h1>HOMELETTE</h1>
@@ -30,11 +30,10 @@
 					<h5>My Dinner</h5>
 				</div>
 				<div class="row">
-					People:
-					<input type="number" value="3" id="numguestsinput">
+					People: <span id="numberOfGuests"></span>
 				</div>
 				<div class="row">
-					<table class="table table-striped" id="dishtable">
+					<table class="table table-striped" id="dishTable">
 						<tr>
 							<th>Dish name</th>
 							<th>Cost</th>
@@ -46,18 +45,19 @@
 			</div>
 			<!-- end left panel -->
 			<!-- begin middle panel -->
+			<div id="dishSpecs">
 			<div class="col-md-5" style="border: 3px solid black">
-					<h5><span id="dishname"></span></h5>
-					<img src="..." id="dishimg">
-					<p><span id="dishdescr"><span></p>
+					<h5><span id="dishName"></span></h5>
+					<img src="..." id="dishImg">
+					<p><span id="dishDescr"><span></p>
 					<a class="btn btn-default" href="#" role="button">back to Select Dish</a>
 			</div>
 			<!-- end middle panel -->
 			<!-- begin right panel -->
 			<div class="col-md-5" style="border: 3px solid black">
-					<h5>Ingredients for <span id="numguests"></span> people</h5>
+					<h5>Ingredients for <span id="numGuests"></span> people</h5>
 					<hr>
-					<table class="table table-striped" id="ingredienttable">
+					<table class="table table-striped" id="ingredientTable">
 						<tr>
 							<th>Quantity</th>
 							<th>Ingredient</th>
@@ -68,9 +68,10 @@
 						<div class="col-md-5">
 							<a class="btn btn-default" href="#" role="button">Confirm Dish</a></td>
 						</div>
-						<p style="text-align:right">Total SEK: <span id="totalcost"></span></p>
+						<p style="text-align:right">Total SEK: <span id="totalCost"></span></p>
 					</div>
 			<!-- end right panel -->
+			</div>
 			</div>
 		</div>
 	</div>

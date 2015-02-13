@@ -25,40 +25,39 @@
 		<!-- body -->
 		<div class="row" style="border: 3px solid black">
 			<!-- left panel -->
-			<div class="col-md-2" style="border: 3px solid black">
+			<div class="col-md-2" style="border: 3px solid black" id="leftDishList">
 				<div class="row">
 					<h5>My Dinner</h5>
 				</div>
 				<div class="row">
-					People:
-					<input type="number" value="3" id="numguestsinput">
+					People: <span id="numberOfGuests"></span>
 				</div>
 				<div class="row">
-					<table class="table table-striped" id="dishtable">
+					<table class="table table-striped" id="dishTable">
 						<tr>
 							<th>Dish name</th>
 							<th>Cost</th>
 						</tr>
 					</table>
-					<p style="text-align:right">Total SEK: <span id="totalcost"></span></p>
-					<input class="btn btn-default" type="submit" value="Confirm Dinner">
+					<p style="text-align:right">Total SEK: <span id="totalCost"></span></p>
+					<input class="btn btn-default" type="submit" value="Confirm Dinner" id="confirmBtn">
 				</div>
 			</div>
 			<!-- right panel -->
-			<div class="col-md-10" style="border: 3px solid black">
+			<div class="col-md-10" style="border: 3px solid black" id="dishSelectionPanel">
 				<!-- top row -->
 				<div class="row" style="border: 3px solid black">
 					<h5>SELECT DISH</h5>
 					<hr>
 					<form class="form-inline"<>
 						<div class="form-group">
-							<input type="search" class="form-control" placeholder="Enter key words">
+							<input type="search" class="form-control" placeholder="Enter key words" id="keyWords">
 						</div>
 						<div class="form-group">
-							<input class="btn btn-default" type="submit" value="Search">
+							<input class="btn btn-default" type="submit" value="Search" id="keyWordBtn">
 						</div>
 						<div class="form-group">
-							<div class="dropdown">
+							<div class="dropdown" id="typeDropDown">
 						  		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 						  			Choose course
 						  			<span class="caret"></span>

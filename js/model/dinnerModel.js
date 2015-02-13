@@ -1,19 +1,20 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
- 
+	var numGuests = 0;
+	var menu = [];
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 	//Can i save it ?
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
-		this.numGuests = num;
+		numGuests = num;
 	}
 
 	// should return 
 	this.getNumberOfGuests = function() {
 		//TODO Lab 2
-		return this.numGuests;
+		return numGuests;
 		
 	}
 
@@ -37,12 +38,12 @@ var DinnerModel = function() {
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		return this.menu;
+		return menu;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		var allIngredients;
+		var allIngredients = [];
 		var index = 0;
 		
 		for(i = 0; i < menu.length; i++){
@@ -51,7 +52,6 @@ var DinnerModel = function() {
 				index += 1;
 			}
 		}
-		
 		return allIngredients;
 	}
 
@@ -66,6 +66,16 @@ var DinnerModel = function() {
 		}
 				
 		return count;
+	}
+	
+	this.getDishCost = function(pos) {
+		var cost = 0;
+		
+		for(j=0 ; j < menu[pos].ingredients.length ; j++){
+				cost += menu[pos].ingredients[j].price * numGuests;
+		}
+		
+		return cost;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
@@ -129,8 +139,7 @@ var DinnerModel = function() {
 		}
 	}
 
-	var numGuests = 0;
-	var menu;
+	
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
 	// image (name of the image file), description and
