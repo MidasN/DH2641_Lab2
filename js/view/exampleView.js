@@ -10,26 +10,29 @@ var ExampleView = function (container,model) {
  this.numberOfGuests.html(model.getNumberOfGuests());
  
 }
- 
- var LeftDishList = function (container, model){
-	 
-	 this.numGuests = container.find("#numberOfGuests");
-	 this.dishTable = container.find("#dishTable");
-	 this.total = container.find("#totalCost");
-	 this.confirmBtn = container.find("#confirmBtn");
-	
-	 for(i = 0; i < model.getFullMenu().length ; i++){
-		 var row = dishTable.insertRow(-1);
-		 var cell1 = row.insertCell(0);
-		 var cell2 = row.insertCell(1);
-		 
-		 cell1.innerHTML = model.getFullMenu()[i].name;
-		 cell2.innerHTML = model.getDishCost(i);
-	 }
+
+ var DishOverview = function(container, model){
+	 this.starterimg = container.find("#starterimg");
+	 this.starterName = container.find("#starterName");
+	 this.startercost = container.find("#startercost");
+	 this.mainimg = container.find("#mainimg");
+	 this.mainname = container.find("#mainname");
+	 this.maincost = container.find("#maincost");
+	 this.dessertimg = container.find("#dessertimg");
+	 this.dessertname = container.find("#dessertname");
+	 this.dessertcost = container.find("#dessertcost");
+	 this.totalCost = container.find("#totalCost");
+	 this.numGuests = container.find("#numGuests");
 	 
 	 this.numGuests.html(model.getNumberOfGuests());
-	 this.total.html(model.getTotalMenuPrice());
 	 
+	 this.starterName.html(model.getFullMenu()[0].name);
+	 this.startercost.html(model.getDishCost(0));
+	 this.mainname.html(model.getFullMenu()[1].name);
+	 this.maincost.html(model.getDishCost(1));
+	 this.dessertname.html(model.getFullMenu()[2].name);
+	 this.dessertcost.html(model.getDishCost(2));
+	 this.totalCost.html(model.getTotalMenuPrice());
  }
  
  var DishSelectionPanel = function(container, model){
@@ -37,8 +40,31 @@ var ExampleView = function (container,model) {
 	 this.keyWordBtn = container.find("#keyWordBtn");
 	 this.typeDropDown = container.find("#typeDropDown");
  }
+
+ 
+ var LeftDishList = function (container, model){
+	 if(container.find("#dishTable").length > 0){
+	 this.numGuests = container.find("#numberOfGuests");
+	 this.dishTable = container.find("#dishTable");
+	 this.total = container.find("#totalCost");
+	 this.confirmBtn = container.find("#confirmBtn");
+	
+	 for(i = 0; i < model.getFullMenu().length ; i++){
+			var row = dishTable.insertRow(-1);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+		 
+			cell1.innerHTML = model.getFullMenu()[i].name;
+			cell2.innerHTML = model.getDishCost(i);
+	 }
+	 
+	 this.numGuests.html(model.getNumberOfGuests());
+	 this.total.html(model.getTotalMenuPrice());
+	 }
+ }
  
  var DishSpecs = function(container, model, id){
+	 if(container.find("#ingredientTable").length > 0){
 	 this.dishName = container.find("#dishName");
 	 this.dishImg = container.find("#dishImg");
 	 this.dishDescr = container.find("#dishDescr");
@@ -63,24 +89,6 @@ var ExampleView = function (container,model) {
 	 }
 	 
 	 this.totalCost.html(model.getDishCost(2));
+	 }
  }
  
- var DishOverview = function(container, model){
-	 this.starterimg = container.find("#starterimg");
-	 this.starterName = container.find("#starterName");
-	 this.startercost = container.find("#startercost");
-	 this.mainimg = container.find("#mainimg");
-	 this.mainname = container.find("#mainname");
-	 this.maincost = container.find("#maincost");
-	 this.dessertimg = container.find("#dessertimg");
-	 this.dessertname = container.find("#dessertname");
-	 this.dessertcost = container.find("#dessertcost");
-	 
-	 this.starterName.html(model.getFullMenu()[0].name);
-	 this.startercost.html(model.getDishCost(0));
-	 this.mainname.html(model.getFullMenu()[1].name);
-	 this.maincost.html(model.getDishCost(1));
-	 this.dessertname.html(model.getFullMenu()[2].name);
-	 this.dessertcost.html(model.getDishCost(2));
-	
- }
