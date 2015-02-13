@@ -12,7 +12,7 @@
   <body>
 	<div class="container-fluid">
 		<!-- header -->
-		<div class="container-fluid" style="border: 3px solid black" id="leftDishList">
+		<div class="container-fluid" style="border: 3px solid black">
 			<div class="row">
 				<div class="col-md-3">
 					<h1>HOMELETTE</h1>
@@ -25,7 +25,7 @@
 		<!-- body -->
 		<div class="row" style="border: 3px solid black">
 			<!-- begin left panel -->
-			<div class="col-md-2" style="border: 3px solid black">
+			<div class="col-md-2" style="border: 3px solid black" id="leftDishList">
 				<div class="row">
 					<h5>My Dinner</h5>
 				</div>
@@ -39,23 +39,22 @@
 							<th>Cost</th>
 						</tr>
 					</table>
-					<p style="text-align:right">Total SEK: <span id="totalcost"></span></p>
+					<p style="text-align:right">Total SEK: <span id="totalCost"></span></p>
 					<input class="btn btn-default" type="submit" value="Confirm Dinner">
 				</div>
 			</div>
 			<!-- end left panel -->
 			<!-- begin middle panel -->
-			<div id="dishSpecs">
-			<div class="col-md-5" style="border: 3px solid black">
-					<h5><span id="dishName"></span></h5>
+			<div class="col-md-5" style="border: 3px solid black" id="dishSpecs">
+					<h5>Name : <span id="dishName"></span></h5>
 					<img src="..." id="dishImg">
-					<p><span id="dishDescr"><span></p>
+					<p> Description :<span id="dishDescr"><span></p>
 					<a class="btn btn-default" href="#" role="button">back to Select Dish</a>
 			</div>
 			<!-- end middle panel -->
 			<!-- begin right panel -->
-			<div class="col-md-5" style="border: 3px solid black">
-					<h5>Ingredients for <span id="numGuests"></span> people</h5>
+			<div class="col-md-5" style="border: 3px solid black" id="ingrList">
+					<h5>Ingredients for <span id="numberOfGuests"></span> people</h5>
 					<hr>
 					<table class="table table-striped" id="ingredientTable">
 						<tr>
@@ -71,7 +70,6 @@
 						<p style="text-align:right">Total SEK: <span id="totalCost"></span></p>
 					</div>
 			<!-- end right panel -->
-			</div>
 			</div>
 		</div>
 	</div>
