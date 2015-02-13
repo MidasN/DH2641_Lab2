@@ -67,7 +67,7 @@ var ExampleView = function (container,model) {
  
  var DishOverview = function(container, model){
 	 this.starterimg = container.find("#starterimg");
-	 this.startername = container.find("#startername");
+	 this.starterName = container.find("#starterName");
 	 this.startercost = container.find("#startercost");
 	 this.mainimg = container.find("#mainimg");
 	 this.mainname = container.find("#mainname");
@@ -76,6 +76,11 @@ var ExampleView = function (container,model) {
 	 this.dessertname = container.find("#dessertname");
 	 this.dessertcost = container.find("#dessertcost");
 	 
-	 this.startername.html(model.getFullMenu()[0].name);
+	 this.starterName.html(model.getFullMenu()[0].name);
+	 this.startercost.html(model.getDishCost(0));
+	 this.mainname.html(model.getFullMenu()[1].name);
+	 this.maincost.html(model.getDishCost(1));
+	 this.dessertname.html(model.getFullMenu()[2].name);
+	 this.dessertcost.html(model.getDishCost(2));
 	
  }
