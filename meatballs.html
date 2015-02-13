@@ -12,51 +12,41 @@
   <body>
 	<div class="container-fluid">
 		<!-- header -->
-		<div class="container-fluid" style="border: 3px solid black">
-			<div class="row">
-				<div class="col-md-3">
-					<h1>HOMELETTE</h1>
-				</div>
-				<div class="col-md-9">
-					<h5><i>From the best chefs in the world directly into your kitchen</i></h5>
-				</div>
-			</div>
+		<div class="row" style="padding-top: 1em; position: absolute; top: 0; right:0; left: 0; bottom:80%; border: 3px solid black; background: rgba(211,211,211,.7);">
+			<span style="text-align: center;"> 
+				<h1>HOMELETTE<small><i style="color: #000000;">&nbsp; &nbsp; &nbsp; From the best chefs in the world directly into your kitchen</i></small></h1>
+			</span>
 		</div>
 		<!-- body -->
-		<div class="row" style="border: 3px solid black">
-			<!-- begin left panel -->
-			<div class="col-md-2" style="border: 3px solid black" id="leftDishList">
-				<div class="row">
-					<h5>My Dinner</h5>
-				</div>
-				<div class="row">
+		<div class="row" style="position: absolute; top: 20%; bottom: 0;">
+			<!-- left panel -->
+			<div class="col-md-3" style="height:100%; border: 3px solid black; border-top: none;" id="leftDishList">	
+				<h5>My Dinner</h5>
 					People: <span id="numberOfGuests"></span>
-				</div>
-				<div class="row">
 					<table class="table table-striped" id="dishTable">
 						<tr>
 							<th>Dish name</th>
 							<th>Cost</th>
 						</tr>
 					</table>
-					<p style="text-align:right">Total SEK: <span id="totalCost"></span></p>
-					<input class="btn btn-default" type="submit" value="Confirm Dinner">
-				</div>
+				<p style="text-align:right">Total SEK: <span id="totalCost"></span></p>
+				<input class="btn btn-default" type="submit" value="Confirm Dinner" id="confirmBtn">
 			</div>
-			<!-- end left panel -->
-			<!-- begin middle panel -->
+			<!-- middle panel -->
 			<div id="dishSpecs">
-			<div class="col-md-5" style="border: 3px solid black">
-					<h5>Name : <span id="dishName"></span></h5>
+				<!-- dish panel -->
+				<div class="col-md-5" style="border: 0px solid black">
+					<h3><span id="dishName"></span></h3>
 					<img src="images/meatballs.jpg" id="dishImg">
-					<p> Description :<span id="dishDescr"><span></p>
+					<br /><br />
+					<p><span id="dishDescr"><span></p>
+					<br />
 					<a class="btn btn-default" href="#" role="button">back to Select Dish</a>
-			</div>
-			<!-- end middle panel -->
-			<!-- begin right panel -->
-			<div class="col-md-5" style="border: 3px solid black" id="ingrList">
+				</div>
+			
+				<!-- ingredients panel -->
+				<div class="col-md-4" style="border: 3px solid black; border-top: none; background: rgba(255,255,157,.7);" id="ingrList">
 					<h5>Ingredients for <span id="numberOfGuests"></span> people</h5>
-					<hr>
 					<table class="table table-striped" id="ingredientTable">
 						<tr>
 							<th>Quantity</th>
@@ -64,14 +54,10 @@
 							<th>Cost</th>
 						</tr>
 					</table>
-					<div class="row">
-						<div class="col-md-5">
-							<a class="btn btn-default" href="#" role="button">Confirm Dish</a></td>
-						</div>
-						<p style="text-align:right">Total SEK: <span id="totalCost"></span></p>
-					</div>
-			<!-- end right panel -->
-			</div>
+					<a class="btn btn-default" href="#" role="button">Confirm Dish</a>
+					<p style="text-align: right;">Total SEK: <span id="totalCost"></span></span>
+						
+				</div>
 			</div>
 		</div>
 	</div>
