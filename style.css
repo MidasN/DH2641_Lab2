@@ -21,3 +21,13 @@ text-align: center;
 .verticalLine {
 	border-right: solid #000000;
 }
+
+.homebody{
+	background: url(http://www.bordeaux.com/us/blog/wp-content/uploads/2013/07/E325_0713_bordeaux.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.h1 .small {
+	color: #000000;
+}
