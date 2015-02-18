@@ -1,39 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planner</title>
+  	<title>Home</title>
 
     <!-- Bootstrap CSS -->
-	<!-- test -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-
-  </head>
-  <body>
-	<div class="container">
-		<h1>Dinner planner</h1>
-		<div id="exampleView">
-			<div>
-				Number of guests: <span id="numberOfGuests"></span>
-			</div>
-			<div>
-          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-			</div>
-		</div>
-	</div>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  	<!-- The application JavaScript code -->
+  	<script src="js/app.js"></script>
+  	<script src="js/model/dinnerModel.js"></script>
+  	<script src="js/view/exampleView.js"></script>
+  	<script src="js/view/exampleViewController.js"></script>
 
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
-  </body>
+  </head>
+  <body>
+    <div class="container-fluid">
+
+    <!-- universal header -->    
+      <div class="row" style="padding-top: 1em; padding-bottom: 2em; border: 3px solid black; background: rgba(211,211,211,.7);">
+        <span style="text-align: center;"> 
+          <h1>HOMELETTE<small><i style="color: #000000;">&nbsp; &nbsp; &nbsp; From the best chefs in the world directly into your kitchen</i></small></h1>
+        </span>
+      </div>
+
+    <!-- home -->
+    <div id="homeView">
+      <div class="row">
+        <div class="col-md-5" style="position: absolute; top: 30%; right:0; left: 2%; bottom:20%; background: rgba(300,300,300,.8);">
+        <span>
+          <h3>A Home Dinner Service</h3>
+          <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat et quam efficitur feugiat eu id libero. Suspendisse a varius mi. Morbi dictum bibendum tellus, sed pulvinar lectus gravida eget. Vivamus pulvinar ligula odio, vel porttitor urna malesuada non.</p>
+          <p><br /><br /> start quickly </p>
+          <a class="btn btn-default" href="#" role="button"><b>Create new dinner</b></a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Common sidebar of Select Dish & Dish Info -->
+    <div id="dishView">
+      <div class="row" style="height: 82.5%; border: 3px solid black; border-top: 0px;">
+        <!-- universal left panel -->
+        <div class="col-md-3" style="height:100%; border-right: 3px solid black;" id="leftDishList">  
+          <h5>My Dinner</h5>
+          People: <span id="numberOfGuests"></span>
+            <table class="table table-striped" id="dishTable">
+              <tr>
+                <th>Dish name</th>
+                <th>Cost</th>
+              </tr>
+            </table>
+          <p style="text-align:right">Total SEK: <span id="totalCost"></span></p>
+          <input class="btn btn-default" type="submit" value="Confirm Dinner" id="confirmBtn">
+        </div>
+
+        <!-- Select Dish -->
+        <div id="selectdishView">
+          <!-- Dish search -->
+          <div class="col-md-9" style="padding-top: 1em; padding-bottom: 2em; border-bottom: 3px solid black; background: rgba(255,255,157,.7);">
+            <h4>SELECT DISH</h4> 
+            <hr>
+            <form class="form-inline"<>
+              <div class="form-group">
+                <input type="search" class="form-control" placeholder="Enter key words" id="keyWords">
+              </div>
+              <div class="form-group">
+                <input class="btn btn-default" type="submit" value="Search" id="keyWordBtn">
+              </div>
+              <div class="form-group">
+                <div class="dropdown" id="typeDropDown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                  Choose course
+                  <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Starter</a></li>
+                      <li><a href="#">Main</a></li>
+                      <li><a href="#">Dessert</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">All</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- Dish list -->
+            <div class="col-md-9" style="padding-top: 2em; padding-bottom: 3em; border: 0px solid black;">
+              <div class="col-md-2">
+                <a href="#" class="thumbnail">
+                  <img src="images/toast.jpg" alt="...">
+                </a>
+                <div class="caption">
+                  <a href="#"><h5>Toast</h5></a>
+                  <p>Crunchy</p>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <a href="#" class="thumbnail">
+                  <img src="images/sourdough.jpg" alt="...">
+                </a>
+                <div class="caption">
+                  <a href="#"><h5>Sourdough</h5></a>
+                  <p>What is this</p>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <a href="#" class="thumbnail">
+                  <img src="images/meatballs.jpg" alt="...">
+                </a>
+                <div class="caption">
+                  <a href="#"><h5>Meatballs</h5></a>
+                  <p>Delicious</p>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <a href="#" class="thumbnail">
+                  <img src="images/icecream.jpg" alt="...">
+                </a>
+                <div class="caption">
+                  <a href="#"><h5>Ice cream</h5></a>
+                  <p>Glass in Swedish</p>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <a href="#" class="thumbnail">
+                  <img src="images/bakedbrie.jpg" alt="...">
+                </a>
+                <div class="caption">
+                  <a href="#"><h5>Baked Brie</h5></a>
+                  <p>Yum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish info -->
+          <div id="dishinfoView">
+            <!-- Description panel -->
+            <div id="dishSpecs">
+              <div class="col-md-5" style="border: 0px solid black">
+                <h3><span id="dishName"></span></h3>
+                <img src="images/meatballs.jpg" id="dishImg">
+                <br /><br />
+                <p><span id="dishDescr"></span></p>
+                <br />
+                <a class="btn btn-default" href="#" role="button">back to Select Dish</a>
+              </div>
+
+              <!-- Ingredient panel -->
+              <div class="col-md-4" style="border: 3px solid black; border-top: none; background: rgba(255,255,157,.7);" id="ingrList">
+                <h5>Ingredients for <span id="numberOfGuests"></span> people</h5>
+                  <table class="table table-striped" id="ingredientTable">
+                    <tr>
+                      <th>Quantity</th>
+                      <th>Ingredient</th>
+                      <th>Cost</th>
+                    </tr>
+                  </table>
+                  <a class="btn btn-default" href="#" role="button">Confirm Dish</a>
+                  <p style="text-align: right;">Total SEK: <span id="totalCost"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Common Guest-Number-Bar of Dinner Overview & Dinner Preparation -->
+      <div id="dinnerView">
+        <div class="row">
+          <div class="col-md-12" style="border: 3px solid black; border-top: none; background: rgba(255,255,157,.7)">
+            <div class="col-md-6" >
+              <h3>My dinner: <span id="numGuests"></span> people</h3>
+            </div>
+            <div class="col-md-6" style="padding-top: 1em;">
+              <p style="text-align: right"><a class="btn btn-default" href="#" role="button">back to Select Dish</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dinner Overview -->
+        <!-- selected dishes -->
+        <div id="dinnerOverviewView">
+          <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-2" style="padding-top: 2em;">
+              <img src="images/toast.jpg" class="img-responsive" alt="Responsive image" id="starterimg" />
+              <div class="caption">
+                <h5><span id="starterName"></span></h5>
+                <p><span id="startercost"></span></p>
+              </div>
+            </div>
+            <div class="col-md-2" style="padding-top: 2em;">
+              <img src="images/meatballs.jpg" class="img-responsive" alt="Responsive image" id="mainimg" />
+              <div class="caption">
+                <h5><span id="mainname"></span></h5>
+                <p><span id="maincost"></span></p>
+              </div>
+            </div>
+            <div class="col-md-2 verticalLine" style="padding-top: 2em;">
+              <img src="images/icecream.jpg" class="img-responsive" alt="Responsive image" id="dessertimg" />
+              <div class="caption">
+                <h5><span id="dessertname"></span></h5>
+                <p><span id="dessertcost"></span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- total price -->
+          <div class="row" style="padding-top: 2em; padding-bottom: 2em">
+            <div class="col-md-9">
+            </div>
+            <div class="col-md-3">
+              <p> Total cost: SEK <span id="totalCost"></span></p>
+            </div>
+          </div>
+
+          <!-- Print Full Recipe button -->
+          <div class="row" style="border-top: 3px solid black">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-3">
+              <br />
+              <button class="btn btn-default"><span class="glyphicon glyphicon-print"></span> Print Full Recipe</button>
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
+        </div>
+      
+        <!-- Dinner Preparation -->
+        <div id="preparationView">
+          <!-- starter -->
+          <div class="row" style="border-bottom: 3px solid black">
+            <div class="col-md-2">
+              <img src="images/toast.jpg" class="img-responsive" alt="Responsive image" id="starterimg">
+            </div>
+            <div class="col-md-4">
+              <h4><span id="startertitle"></span></h4>
+              <p><span id="startertext"></span></p>
+            </div>
+            <div class="col-md-6">
+              <h5>Preparation</h5>
+              <p><span id="starterinstructions"></span></p>
+            </div>
+          </div>
+
+          <!-- main -->
+          <div class="row" style="border-bottom: 3px solid black">
+            <div class="col-md-2">
+              <img src="images/meatballs.jpg" class="img-responsive" alt="Responsive image" id="mainimg">
+            </div>
+            <div class="col-md-4">
+              <h4><span id="maintitle"></span></h4>
+              <p><span id="maintext"></span></p>
+            </div>
+            <div class="col-md-6">
+              <h5>Preparation</h5>
+              <p><span id="maininstructions"></span></p>
+            </div>
+          </div>
+
+          <!-- dessert --> 
+          <div class="row" style="border-bottom: 3px solid black">
+            <div class="col-md-2">
+              <img src="images/icecream.jpg" class="img-responsive" alt="Responsive image" id="dessertimg" />
+            </div>
+            <div class="col-md-4">
+              <h4><span id="desserttitle"></span></h4>
+              <p><span id="desserttext"></span></p>
+            </div>
+            <div class="col-md-6">
+              <h5>Preparation</h5>
+              <p><span id="dessertinstructions"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</body>
 </html>

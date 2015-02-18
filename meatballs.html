@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Home</title>
+  	<title>Meatballs</title>
 
     <!-- Bootstrap CSS -->
 	<!-- test -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/exampleView.js"></script>
+	<script src="js/view/exampleViewController.js"></script>
+
   </head>
-  <body>
+  <body id="container">
 	<div class="container-fluid">
 		<!-- header -->
 		<div class="row" style="padding-top: 1em; position: absolute; top: 0; right:0; left: 0; bottom:80%; border: 3px solid black; background: rgba(211,211,211,.7);">
@@ -56,21 +67,10 @@
 					</table>
 					<a class="btn btn-default" href="#" role="button">Confirm Dish</a>
 					<p style="text-align: right;">Total SEK: <span id="totalCost"></span></span>
-						
 				</div>
 			</div>
 		</div>
 	</div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
   </body>
 </html>

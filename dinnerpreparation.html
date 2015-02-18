@@ -1,78 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Home</title>
+  	<title>Dinner Preparation</title>
 
     <!-- Bootstrap CSS -->
-	<!-- test -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-
-  </head>
-  <body>
-	<div class="container-fluid" style="border: 3px solid black" id="preparationView">
-		<!-- header -->
-		<div class="row" style="padding-top: 1em; position: absolute; top: 0; right:0; left: 0; bottom:80%; border: 3px solid black; background: rgba(211,211,211,.7);">
-			<span style="text-align: center;"> 
-				<h1>HOMELETTE<small><i style="color: #000000;">&nbsp; &nbsp; &nbsp; From the best chefs in the world directly into your kitchen</i></small></h1>
-			</span>
-		</div>
-		
-		<!-- title -->
-		<div class="row" style="position: absolute; left: 0; top: 20%; right:0; bottom: 0;">
-			<div class="col-md-12" style="border: 3px solid black; border-top: none; background: rgba(255,255,157,.7)">
-				<div class="col-md-6" >
-					<h3>My dinner: <span id="numGuests"></span> people</h3>
-				</div>
-				<div class="col-md-6" style="padding-top: 1em;">
-					<p style="text-align: right"><a class="btn btn-default" href="#" role="button">back to Select Dish</a></p>
-				</div>
-			</div>
-		</div>
-			<!-- body -->
-		<div class="row" style="border: 3px solid black; position: absolute; left: 0; top: 29%; right:0; bottom: 0;">
-			<div class="col-md-12" style="border: 3px solid black">
-				<div class="col-md-2">
-					<img src="images/toast.jpg" class="img-responsive" alt="Responsive image" id="starterimg">
-				</div>
-				<div class="col-md-4">
-					<h4><span id="startertitle"></span></h4>
-					<p><span id="startertext"></p>
-				</div>
-					<div class="col-md-6">
-						<h5>Preparation</h5>
-						<p><span id="starterinstructions"></span></p>
-					</div>
-				</div>
-				<div class="col-md-12" style="border: 3px solid black">
-					<div class="col-md-2">
-						<img src="images/meatballs.jpg" class="img-responsive" alt="Responsive image" id="mainimg">
-					</div>
-					<div class="col-md-4">
-						<h4><span id="maintitle"></span></h4>
-						<p><span id="maintext"></p>
-					</div>
-					<div class="col-md-6">
-						<h5>Preparation</h5>
-						<p><span id="maininstructions"></span></p>
-					</div>
-				</div>
-				<div class="col-md-12" style="border: 3px solid black">
-					<div class="col-md-2">
-						<img src="images/icecream.jpg" class="img-responsive" alt="Responsive image" id="dessertimg">
-					</div>
-					<div class="col-md-4">
-						<h4><span id="desserttitle"></span></h4>
-						<p><span id="desserttext"></p>
-					</div>
-					<div class="col-md-6">
-						<h5>Preparation</h5>
-						<p><span id="dessertinstructions"></span></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	 </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -84,5 +17,72 @@
 	<script src="js/model/dinnerModel.js"></script>
 	<script src="js/view/exampleView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
+
+  </head>
+  <body id="container">
+	<div class="container-fluid" style="border: 3px solid black" id="preparationView">
+		<!-- header -->
+		<div class="row" style="padding-top: 1em; padding-bottom: 2em; border: 3px solid black; background: rgba(211,211,211,.7);">
+			<span style="text-align: center;"> 
+				<h1>HOMELETTE<small><i style="color: #000000;">&nbsp; &nbsp; &nbsp; From the best chefs in the world directly into your kitchen</i></small></h1>
+			</span>
+		</div>
+		
+		<!-- title -->
+		<div class="row">
+			<div class="col-md-12" style="border: 3px solid black; border-top: none; background: rgba(255,255,157,.7)">
+				<div class="col-md-6" >
+					<h3>My dinner: <span id="numGuests"></span> people</h3>
+				</div>
+				<div class="col-md-6" style="padding-top: 1em;">
+					<p style="text-align: right"><a class="btn btn-default" href="#" role="button">back to Select Dish</a></p>
+				</div>
+			</div>
+		</div>
+
+			<!-- body -->
+		<div class="row" style="border-bottom: 3px solid black">
+			<div class="col-md-2">
+				<img src="images/toast.jpg" class="img-responsive" alt="Responsive image" id="starterimg">
+			</div>
+			<div class="col-md-4">
+				<h4><span id="startertitle"></span></h4>
+				<p><span id="startertext"></span></p>
+			</div>
+			<div class="col-md-6">
+				<h5>Preparation</h5>
+				<p><span id="starterinstructions"></span></p>
+			</div>
+		</div>
+		
+		<div class="row" style="border-bottom: 3px solid black">
+			<div class="col-md-2">
+				<img src="images/meatballs.jpg" class="img-responsive" alt="Responsive image" id="mainimg" />
+			</div>
+			<div class="col-md-4">
+				<h4><span id="maintitle"></span></h4>
+				<p><span id="maintext"></span></p>
+			</div>
+			<div class="col-md-6">
+				<h5>Preparation</h5>
+				<p><span id="maininstructions"></span></p>
+			</div>
+		</div>
+
+		<div class="row" style="border-bottom: 3px solid black">
+			<div class="col-md-2">
+				<img src="images/icecream.jpg" class="img-responsive" alt="Responsive image" id="dessertimg" />
+			</div>
+			<div class="col-md-4">
+				<h4><span id="desserttitle" /></h4>
+				<p><span id="desserttext" /></p>
+			</div>
+			<div class="col-md-6">
+				<h5>Preparation</h5>
+				<p><span id="dessertinstructions"></span></p>
+			</div>
+		</div>
+	</div>
+
   </body>
 </html>

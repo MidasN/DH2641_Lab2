@@ -28,6 +28,22 @@ text-align: center;
 	background-repeat: no-repeat;
 }
 
-.h1 .small {
-	color: #000000;
+body,html {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.container-fluid {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.row-fluid {
+	margin-right: -15px;
+  	margin-left: -15px;
+	height: inherit;
+	position: relative;
+}
 }

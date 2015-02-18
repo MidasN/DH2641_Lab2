@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Home</title>
+  	<title>Select Dish</title>
 
     <!-- Bootstrap CSS -->
 	<!-- test -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/exampleView.js"></script>
+	<script src="js/view/exampleViewController.js"></script>
+
   </head>
-  <body>
+  <body id="container">
 	<div class="container-fluid">
 		<!-- header -->
-		<div class="row" style="padding-top: 1em; position: absolute; top: 0; right:0; left: 0; bottom:80%; border: 3px solid black; background: rgba(211,211,211,.7);">
+		<div class="row" style="padding-top: 1em; padding-bottom: 2em; border: 3px solid black; background: rgba(211,211,211,.7);">
 			<span style="text-align: center;"> 
 				<h1>HOMELETTE<small><i style="color: #000000;">&nbsp; &nbsp; &nbsp; From the best chefs in the world directly into your kitchen</i></small></h1>
 			</span>
 		</div>
 		<!-- body -->
-		<div class="row" style="position: absolute; top: 20%; bottom: 0;">
+		<div class="row" style="height: 82.5%; border: 3px solid black; border-top: 0px;">
 			<!-- left panel -->
-			<div class="col-md-3" style="height:100%; border: 3px solid black;" id="leftDishList">	
+			<div class="col-md-3" style="height:100%; border-right: 3px solid black;" id="leftDishList">	
 				<h5>My Dinner</h5>
 					People: <span id="numberOfGuests"></span>
 					<table class="table table-striped" id="dishTable">
@@ -34,8 +45,8 @@
 			</div>
 			<!-- right panel -->
 			<!-- top row -->
-			<div class="col-md-9" style="height: 30%; padding-top: 1em; border: 3px solid black; background: rgba(255,255,157,.7);">
-					<h4>SELECT DISH</h4>
+			<div class="col-md-9" style="padding-top: 1em; padding-bottom: 2em; border: 3px solid black; border-right: 0px; border-left: 0px; border-top: 0px; background: rgba(255,255,157,.7);">
+					<h4>SELECT DISH</h4> 
 					<hr>
 					<form class="form-inline"<>
 						<div class="form-group">
@@ -62,7 +73,7 @@
 					</form>
 				</div>
 				<!-- bottom row -->
-				<div class="col-md-9" style="height: 70%; padding-top: 1em; border: 3px solid black;">
+				<div class="col-md-9" style="padding-top: 2em; padding-bottom: 3em; border: 0px solid black;">
 					<div class="col-md-2">
 						<a href="#" class="thumbnail">
 							<img src="images/toast.jpg" alt="...">
@@ -116,15 +127,5 @@
 			</div>
 		</div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
   </body>
 </html>

@@ -1,0 +1,451 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "home.html",
+			"settings":
+			{
+				"buffer_size": 1942,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "selectdish.html",
+			"settings":
+			{
+				"buffer_size": 4396,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 692,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "bootstrap.css",
+			"settings":
+			{
+				"buffer_size": 141417,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "meatballs.html",
+			"settings":
+			{
+				"buffer_size": 2847,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dinnerpreparation.html",
+			"settings":
+			{
+				"buffer_size": 3279,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 153.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/dinneroverview.html",
+		"/C/xampp/htdocs/InfVisP2/test2.html",
+		"/C/Users/MidasN/AppData/Local/Temp/fz3temp-1/index.html",
+		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/User/HTML.sublime-settings",
+		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/selectdish.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/dinnerpreparation.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/meatballs.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/style.css",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/home.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/bootstrap.css",
+		"/C/Users/MidasN/Desktop/index2.html",
+		"/C/xampp/htdocs/InfVisP2/Final/index.html",
+		"/C/xampp/htdocs/InfVisP2/Final/d3tip.js",
+		"/C/xampp/htdocs/InfVisP2/Final/datamaps.world.min.js",
+		"/C/xampp/htdocs/InfVisP2/d3.slider.js",
+		"/C/xampp/htdocs/InfVisP2/d3.slider.css",
+		"/C/xampp/htdocs/InfVisP2/datamaps.world.js",
+		"/C/xampp/htdocs/InfVisP2/datamaps.world.min.js",
+		"/C/xampp/htdocs/InfVisP2/index.html",
+		"/C/xampp/htdocs/InfVisP2/us.json",
+		"/C/xampp/htdocs/InfVisP2/borders.html",
+		"/G/datamaps.world.min.js",
+		"/G/datamaps.world.js",
+		"/G/test2.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Information Visualisation/Project 2/test2.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Information Visualisation/Project 2/datamaps.world.min.js",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/index.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/js/view/exampleView.js",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/js/model/dinnerModel.js",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/README.md"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"row",
+			"update",
+			"+h",
+			"indent",
+			"color",
+			"background",
+			"small",
+			"current",
+			"svg",
+			"clip",
+			"clip-land",
+			"datum",
+			"popupTemplate",
+			"geographyConfig",
+			"div",
+			"mercator",
+			"transversemercator",
+			"tickformat",
+			"formatter",
+			"displayvalue",
+			"draggertext",
+			"major",
+			"anchor",
+			"text-anchor",
+			"tick",
+			"highlightfillcolor",
+			"highlightFillColor",
+			"hover",
+			"path",
+			"d\"",
+			"d ",
+			"d)",
+			"d.",
+			"total",
+			"callback",
+			"fillkey",
+			"btn",
+			"button",
+			"sek",
+			"caption",
+			"btn-default",
+			"link"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "home.html",
+					"settings":
+					{
+						"buffer_size": 1942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								828,
+								828
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 262.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "selectdish.html",
+					"settings":
+					{
+						"buffer_size": 4396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 304.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								518,
+								518
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "bootstrap.css",
+					"settings":
+					{
+						"buffer_size": 141417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26269,
+								26225
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 30575.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "meatballs.html",
+					"settings":
+					{
+						"buffer_size": 2847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								818,
+								818
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "dinnerpreparation.html",
+					"settings":
+					{
+						"buffer_size": 3279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								811,
+								811
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 95.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
