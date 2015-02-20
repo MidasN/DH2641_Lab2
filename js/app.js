@@ -1,7 +1,7 @@
 $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
-	model.setNumberOfGuests(2);
+	model.setNumberOfGuests(0);
 	model.addDishToMenu(1);
 	model.addDishToMenu(100);
 	model.addDishToMenu(201);

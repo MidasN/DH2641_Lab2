@@ -1,6 +1,9 @@
-var  selectDishView = function(container){
+var selectDishView = function(container, model){
 	
-	this.numberOfGuests = container.find("#numGuests");
+	this.keyWords = container.find("#keyWords");
+	this.keyWordBtn = container.find("#keyWordBtn");
+	this.typeDropDown = container.find("#typeDropDown");
 	
-	this.numberOfGuests.html(model.getNumberOfGuests());
-}
+	
+	
+};
