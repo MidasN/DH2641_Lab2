@@ -10,15 +10,10 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-  	<!-- The application JavaScript code -->
-  	<script src="js/app.js"></script>
-  	<script src="js/model/dinnerModel.js"></script>
-  	<script src="js/view/exampleView.js"></script>
-  	<script src="js/controllers/exampleViewController.js"></script>
 
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid homebody" id="bgdiv">
 
     <!-- universal header -->    
       <div class="row" style="padding-top: 1em; padding-bottom: 2em; border: 3px solid black; background: rgba(211,211,211,.7);">
@@ -35,21 +30,21 @@
             <h3>A Home Dinner Service</h3>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat et quam efficitur feugiat eu id libero. Suspendisse a varius mi. Morbi dictum bibendum tellus, sed pulvinar lectus gravida eget. Vivamus pulvinar ligula odio, vel porttitor urna malesuada non.</p>
-            <p><br /><br /> start quickly </p>
-            <a class="btn btn-default" href="#" role="button"><b>Create new dinner</b></a>
+            <p><br /><br />Start quickly </p>
+            <button class="btn btn-default" id="buttonCreate"><b>Create new dinner</b></button>
             </span>
           </div>
         </div>
       </div>
 
     <!-- Select Dish & Dish Info -->
-      <div id="dishView">
+      <div id="dishView"  style="display: none;">
         <div class="row" style="height: 82.5%; border: 3px solid black; border-top: 0px;">
 
         <!-- Common sidebar of Select Dish & Dish Info -->
           <div class="col-md-3" style="height:100%; border-right: 3px solid black;" id="leftDishListView">  
             <h5>My Dinner</h5>
-            People: <form> <input type="number" id="numberOfGuests"></input></form>
+            <form> People: <input type="number" id="numGuests" value="0"></input></form>
               <table class="table table-striped" id="dishTable">
                 <tr>
                   <th>Dish name</th>
@@ -61,8 +56,8 @@
           </div>
 
         <!-- Select Dish -->
-          <div id="selectDishView">
-			<!-- Dish search -->
+          <div id="selectDishView" style="display: none;">
+          <!-- Dish search -->
             <div class="col-md-9" style="padding-top: 1em; padding-bottom: 2em; border-bottom: 3px solid black; background: rgba(255,255,157,.7);">
               <h4>SELECT DISH</h4> 
               <hr>
@@ -92,7 +87,7 @@
             </div>
 
           <!-- Dish list -->
-            <div class="col-md-9" style="padding-top: 2em; padding-bottom: 3em; border: 0px solid black;">
+            <div class="col-md-9" style="padding-top: 2em; padding-bottom: 3em;">
               <div class="col-md-2">
                 <a href="#" class="thumbnail">
                   <img src="images/toast.jpg" alt="...">
@@ -146,7 +141,7 @@
           </div>
 
         <!-- Dish info -->
-          <div id="dishInfoView">
+          <div id="dishInfoView" style="display: none;">
           <!-- Description panel -->
             <div id="dishSpecs">
               <div class="col-md-5" style="border: 0px solid black">
@@ -155,7 +150,7 @@
                 <br /><br />
                 <p><span id="dishDescr"></span></p>
                 <br />
-                <a class="btn btn-default" href="#" role="button">back to Select Dish</a>
+                <button class="btn btn-default" id="buttonInfoBack">back to Select Dish</a>
               </div>
 
             <!-- Ingredient panel -->
@@ -178,20 +173,20 @@
       
     <!-- Common Guest-Number-Bar of Dinner Overview & Dinner Preparation -->
       <div>
-        <div class="row" id="dinnerView">
+        <div class="row" id="dinnerView" style="display: none">
           <div class="col-md-12" style="border: 3px solid black; border-top: none; background: rgba(255,255,157,.7)">
             <div class="col-md-6">
               <h3>My dinner: <span id="numGuests"></span> people</h3>
             </div>
             <div class="col-md-6" style="padding-top: 1em;">
-              <p style="text-align: right"><a class="btn btn-default" href="#" role="button">back to Select Dish</a></p>
+              <p style="text-align: right"><button class="btn btn-default" id="buttonBack">back to Select Dish</button></p>
             </div>
           </div>
         </div>
 		
     <!-- Dinner Overview -->
       <!-- selected dishes -->
-        <div id="dinnerOverviewView">
+        <div id="dinnerOverviewView" style="display: none">
           <div class="row">
             <div class="col-md-3">
             </div>
@@ -233,7 +228,7 @@
             </div>
             <div class="col-md-3">
               <br />
-              <button class="btn btn-default"><span class="glyphicon glyphicon-print"></span> Print Full Recipe</button>
+              <button class="btn btn-default" id="buttonPrint"><span class="glyphicon glyphicon-print"></span> Print Full Recipe</button>
             </div>
             <div class="col-md-4">
             </div>
@@ -241,7 +236,7 @@
         </div>
       
       <!-- Dinner Preparation -->
-        <div id="dinnerPreparationView">
+        <div id="dinnerPreparationView" style="display: none;">
           <!-- starter -->
           <div class="row" style="border-bottom: 3px solid black">
             <div class="col-md-2">
@@ -289,6 +284,29 @@
         </div>
       </div>
     </div>
+
+  <!-- The application JavaScript code -->
+    <script src="js/app.js"></script>
+    <script src="js/model/dinnerModel.js"></script>
+    <!-- views -->
+    <script src="js/view/dinnerOverviewView.js"></script>
+    <script src="js/view/dinnerPreparationView.js"></script>
+    <!-- <script src="js/view/dinnerView.js"></script> -->
+    <script src="js/view/dishInfoView.js"></script>
+    <script src="js/view/homeView.js"></script>
+    <script src="js/view/leftDishListView.js"></script>
+    <script src="js/view/selectDishView.js"></script>
+    <!-- controllers -->
+    <script src="js/controllers/dinnerController.js"></script>
+    <script src="js/controllers/dinnerOverViewController.js"></script>
+    <script src="js/controllers/dinnerPreparationController.js"></script>
+    <script src="js/controllers/homeController.js"></script>
+    <script src="js/controllers/leftDishListController.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/controllers/selectDishController.js"></script>
+    <!-- do we need these? -->
+    <script src="js/view/exampleView.js"></script>
+    <!-- <script src="js/view/exampleViewController.js"></script> -->
 
 </body>
 </html>

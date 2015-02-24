@@ -1,6 +1,7 @@
-var LeftDishListView = function(container, model){
+var leftDishListView = function(container, model){
 	this.container = container;
 	model.addObserver(this);
+	
 	
 	this.numGuests = container.find("#numberOfGuests");
 	this.dishTable = container.find("#dishTable");
@@ -22,8 +23,6 @@ var LeftDishListView = function(container, model){
 		this.numGuests.html(model.getNumberOfGuests());
 		this.total.html(model.getTotalMenuPrice());
 	}
-	 
-	
 	
 	this.update = function(){
 		loadDishList();

@@ -27,3 +27,36 @@ var DinnerPreparationView = function(view, model){
 	this.maininstructions.html(model.getSelectedDish('main dish').description);
 	this.dessertinstructions.html(model.getSelectedDish('dessert').description);
 };
+
+var button = document.getElementById('buttonBack');
+
+button.onclick = function() {
+    //hide
+    var dinnerView = document.getElementById('dinnerView');
+    if (dinnerView.style.display !== 'none') {
+        dinnerView.style.display = 'none';
+    }
+    var dinnerOverviewView = document.getElementById('dinnerOverviewView');
+    if (dinnerOverviewView.style.display !== 'none') {
+        dinnerOverviewView.style.display = 'none';
+    }
+    var dinnerPreparationView = document.getElementById('dinnerPreparationView');
+    if (dinnerPreparationView.style.display !== 'none') {
+        dinnerPreparationView.style.display = 'none';
+    }
+    //show
+    var dishView = document.getElementById('dishView')
+    if (dishView.style.display == 'none') {
+        dishView.style.display = 'block';
+    }
+    else {
+        dishView.style.display = 'block';
+    }
+    var select = document.getElementById('selectDishView')
+    if (select.style.display == 'none') {
+        select.style.display = 'block';
+    }
+    else {
+        select.style.display = 'block';
+    }
+};

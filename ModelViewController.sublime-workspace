@@ -3,23 +3,51 @@
 	{
 		"selected_items":
 		[
+			[
+				"selec",
+				"selectDishView"
+			],
+			[
+				"lef",
+				"leftDishListView"
+			],
+			[
+				"home",
+				"homeView"
+			],
+			[
+				"dinner",
+				"dinnerView"
+			],
+			[
+				"paddin",
+				"padding-bottom: 〔property〕"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "home.html",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1942,
+				"buffer_size": 12888,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "selectdish.html",
+			"file": "dinnerpreparation.html",
 			"settings":
 			{
-				"buffer_size": 4396,
+				"buffer_size": 3031,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/view/leftDishListView.js",
+			"settings":
+			{
+				"buffer_size": 1118,
 				"line_ending": "Windows"
 			}
 		},
@@ -27,7 +55,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 692,
+				"buffer_size": 758,
 				"line_ending": "Windows"
 			}
 		},
@@ -37,22 +65,6 @@
 			{
 				"buffer_size": 141417,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "meatballs.html",
-			"settings":
-			{
-				"buffer_size": 2847,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dinnerpreparation.html",
-			"settings":
-			{
-				"buffer_size": 3279,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -100,7 +112,15 @@
 	},
 	"file_history":
 	[
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/home.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/dinnerpreparation.html",
 		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/dinneroverview.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/meatballs.html",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/selectdish.html",
+		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/js/app.js",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/js/view/selectDishView.js",
+		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/js/model/dinnerModel.js",
 		"/C/xampp/htdocs/InfVisP2/test2.html",
 		"/C/Users/MidasN/AppData/Local/Temp/fz3temp-1/index.html",
 		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
@@ -108,11 +128,7 @@
 		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
 		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/User/HTML.sublime-settings",
 		"/C/Users/MidasN/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/selectdish.html",
-		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/dinnerpreparation.html",
-		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/meatballs.html",
 		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/style.css",
-		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/home.html",
 		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/bootstrap.css",
 		"/C/Users/MidasN/Desktop/index2.html",
 		"/C/xampp/htdocs/InfVisP2/Final/index.html",
@@ -132,7 +148,6 @@
 		"/C/Users/MidasN/Documents/Master/KTH/Information Visualisation/Project 2/datamaps.world.min.js",
 		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/index.html",
 		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/js/view/exampleView.js",
-		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/js/model/dinnerModel.js",
 		"/C/Users/MidasN/Documents/Master/KTH/Interaction Programming/DH2641_Lab2/README.md"
 	],
 	"find":
@@ -151,6 +166,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"preparation",
+			"style",
+			">\n",
+			"/.",
 			"row",
 			"update",
 			"+h",
@@ -211,56 +230,55 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "home.html",
+					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 1942,
+						"buffer_size": 12888,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								828,
-								828
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 262.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "selectdish.html",
-					"settings":
-					{
-						"buffer_size": 4396,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								71,
-								71
+								3337,
+								3337
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
+							"auto_complete": false,
 							"bh_regions":
 							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -268,45 +286,257 @@
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
-								"bh_unmatched_close"
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
 							],
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 304.0,
+						"translation.y": 1136.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "style.css",
+					"buffer": 1,
+					"file": "dinnerpreparation.html",
 					"settings":
 					{
-						"buffer_size": 692,
+						"buffer_size": 3031,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								518,
-								518
+								3012,
+								3012
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 285.0,
+						"translation.y": 1026.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/view/leftDishListView.js",
+					"settings":
+					{
+						"buffer_size": 1118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								895,
+								895
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 133.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								712,
+								712
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 665.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "bootstrap.css",
 					"settings":
 					{
@@ -317,72 +547,66 @@
 						"selection":
 						[
 							[
-								26269,
-								26225
+								22858,
+								22863
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 30575.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "meatballs.html",
-					"settings":
-					{
-						"buffer_size": 2847,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								818,
-								818
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "dinnerpreparation.html",
-					"settings":
-					{
-						"buffer_size": 3279,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								811,
-								811
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 95.0,
+						"translation.y": 26414.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

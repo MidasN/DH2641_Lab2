@@ -1,3 +1,7 @@
+.hide {
+	display: none;
+}
+
 .btn-default {
   font-weight: normal;
   background-color: #ffa500;
@@ -46,4 +50,10 @@ body,html {
 	height: inherit;
 	position: relative;
 }
+
+
+
+input[type="number"] {
+   width:50px;
 }
+
