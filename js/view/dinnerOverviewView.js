@@ -22,9 +22,9 @@ var DinnerOverviewView = function(container, model){
 	this.dessertcost.html(model.getDishCost(2));
 	this.totalCost.html(model.getTotalMenuPrice());
 	
-	this.update(){
-		dinnerGuests.innerHTML = model.getNumberOfGuests();
-	}
+	this.update = function(){
+		
+	};
 	
 };
 /*
