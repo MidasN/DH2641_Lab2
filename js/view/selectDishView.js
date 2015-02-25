@@ -27,7 +27,6 @@ var SelectDishView = function(container, model){
 			}
 			search.getElementsByTagName('a')[i].innerHTML = result[i].name;
 			search.getElementsByTagName('p')[i].innerHTML = result[i].description;
-			
 			search.getElementsByTagName('img')[i].src="images/toast.jpg";
 			
 			dishIds[i] = result[i].id;

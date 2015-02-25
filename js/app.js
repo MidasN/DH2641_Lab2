@@ -30,6 +30,7 @@ $(function() {
 	var dishInfoController = new DishInfoController(dishInfoView, model);
 	
 	var dinnerOverviewView = new DinnerOverviewView($("#dinnerOverviewView"), model);
+	var dinnerViewController = new DinnerViewController(dinnerOverviewView, model);
 
 	
 });
