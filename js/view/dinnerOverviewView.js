@@ -1,4 +1,6 @@
 var DinnerOverviewView = function(container, model){
+	this.buttonBack = document.getElementById("buttonBack");
+	this.buttonPrint = document.getElementById("buttonPrint");
 	this.starterimg = container.find("#starterimg");
 	this.starterName = container.find("#starterName");
 	this.startercost = container.find("#startercost");
@@ -21,9 +23,8 @@ var DinnerOverviewView = function(container, model){
 	this.totalCost.html(model.getTotalMenuPrice());
 	
 };
-
+/*
 var buttonBack = document.getElementById('buttonBack');
-
 buttonBack.onclick = function() {
     //hide
 	
@@ -56,7 +57,8 @@ buttonBack.onclick = function() {
     }
 	document.getElementById("leftDishListView").style.display = 'block';
 };
-
+*/
+/*
 var buttonPrint = document.getElementById('buttonPrint');
 
 buttonPrint.onclick = function() {
@@ -71,3 +73,4 @@ buttonPrint.onclick = function() {
         dinnerPreparationView.style.display = 'block';
     }
 };
+*/

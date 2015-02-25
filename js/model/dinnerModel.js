@@ -427,6 +427,24 @@ var DinnerModel = function() {
 			'unit':'ml',
 			'price':6
 			}]
+		},{
+		'id': -1,
+		'name':'-',
+		'type':'starter',
+		'description':'-',
+		'ingredients':[]
+		},{
+		'id': -2,
+		'name':'-',
+		'type':'main dish',
+		'description':'-',
+		'ingredients':[]
+		},{
+		'id': -3,
+		'name':'-',
+		'type':'dessert',
+		'description':'-',
+		'ingredients':[]
 		}
 	];
 

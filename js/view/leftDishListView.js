@@ -13,14 +13,13 @@ var LeftDishListView = function(container, model){
 		}
 
 		for(i = 0; i < model.getFullMenu().length ; i++){
-			if(typeof model.getFullMenu()[i] != 'undefined'){
 			var row = dishTable.insertRow(-1);
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(1);
 		
 			cell1.innerHTML = model.getFullMenu()[i].name;
 			cell2.innerHTML = model.getDishCost(i);
-			}
+			
 		}
 		
 		leftNumGuests.value = model.getNumberOfGuests();
