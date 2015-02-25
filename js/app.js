@@ -2,9 +2,9 @@ $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
 	model.setNumberOfGuests(1);
-	model.addDishToMenu(1);
-	model.addDishToMenu(100);
-	model.addDishToMenu(201);
+	model.addDishToMenu(-1);
+	model.addDishToMenu(-2);
+	model.addDishToMenu(-3);
 	
 	//And create the needed controllers and views
 	/*

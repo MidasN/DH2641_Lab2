@@ -6,7 +6,7 @@ var DishInfoController = function(view, model){
 		//show
 		document.getElementById("selectDishView").style.display = 'block';
 	};
-	/*
+	
 	view.confirmDish.onclick = function() {
 		model.addDishToMenu(model.getFocusedId());
 		//hide
@@ -14,6 +14,5 @@ var DishInfoController = function(view, model){
 		//show
 		document.getElementById("selectDishView").style.display = 'block';
 	};
-	*/
 	
 };
