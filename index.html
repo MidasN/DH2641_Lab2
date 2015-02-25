@@ -42,18 +42,20 @@
         <div class="row" style="height: 82.5%; border: 3px solid black; border-top: 0px;">
 
         <!-- Common sidebar of Select Dish & Dish Info -->
-          <div class="col-md-3" style="height:100%; border-right: 3px solid black;" id="leftDishListView">  
+		<div id="leftDishListView" style="display: none;">
+          <div class="col-md-3" style="height:100%; border-right: 3px solid black;" >  
             <h5>My Dinner</h5>
-            <form> People: <input type="number" id="numGuests" value="0"></input></form>
+            <form> People: <input type="number" id="leftNumGuests"></input></form>
               <table class="table table-striped" id="dishTable">
                 <tr>
                   <th>Dish name</th>
                   <th>Cost</th>
                 </tr>
               </table>
-            <p style="text-align:right">Total SEK: <span id="totalCost"></span></p>
-            <input class="btn btn-default" type="submit" value="Confirm Dinner" id="confirmBtn">
+            <p style="text-align:right">Total SEK: <span id="leftTotalCost"></span></p>
+			<button class="btn btn-default" id="confirmBtn"><b>Confirm Dinner</b></button>
           </div>
+		 </div>
 
         <!-- Select Dish -->
           <div id="selectDishView" style="display: none;">
@@ -66,72 +68,54 @@
                   <input type="search" class="form-control" placeholder="Enter key words" id="keyWords">
                 </div>
                 <div class="form-group">
-                  <input class="btn btn-default" type="submit" value="Search" id="keyWordBtn">
+				  <button class="btn btn-default" id="keyWordBtn"><b>Search</b></button>
                 </div>
                 <div class="form-group">
-                  <div class="dropdown" id="typeDropDown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                    Choose course
-                    <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Starter</a></li>
-                      <li><a href="#">Main</a></li>
-                      <li><a href="#">Dessert</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">All</a></li>
-                    </ul>
-                  </div>
+				  <select id="typeDropDown">
+					<option value="starter">Starter</option>
+					<option value="main dish">Main Dish</option>
+					<option value="dessert">Dessert</option>
+				  </select>
                 </div>
               </form>
             </div>
 
           <!-- Dish list -->
-            <div class="col-md-9" style="padding-top: 2em; padding-bottom: 3em;">
-              <div class="col-md-2">
-                <a href="#" class="thumbnail">
-                  <img src="images/toast.jpg" alt="...">
-                </a>
+            <div class="col-md-9" style="padding-top: 2em; padding-bottom: 3em;" id="search">
+              <div class="col-md-2" id="th0">
+                <img src="images/toast.jpg" alt="...">
                 <div class="caption">
                   <a href="#"><h5>Toast</h5></a>
                   <p>Crunchy</p>
                 </div>
               </div>
 
-              <div class="col-md-2">
-                <a href="#" class="thumbnail">
-                  <img src="images/sourdough.jpg" alt="...">
-                </a>
-                <div class="caption">
+              <div class="col-md-2" id="th1">
+				<img src="images/sourdough.jpg" alt="...">
+				<div class="caption">
                   <a href="#"><h5>Sourdough</h5></a>
                   <p>What is this</p>
                 </div>
               </div>
 
-              <div class="col-md-2">
-                <a href="#" class="thumbnail">
-                  <img src="images/meatballs.jpg" alt="...">
-                </a>
-                <div class="caption">
+              <div class="col-md-2" id="th2">
+                <img src="images/meatballs.jpg" alt="...">
+				<div class="caption">
                   <a href="#"><h5>Meatballs</h5></a>
                   <p>Delicious</p>
                 </div>
               </div>
 
-              <div class="col-md-2">
-                <a href="#" class="thumbnail">
-                  <img src="images/icecream.jpg" alt="...">
-                </a>
-                <div class="caption">
+              <div class="col-md-2" id="th3">
+                <img src="images/icecream.jpg" alt="...">
+				<div class="caption">
                   <a href="#"><h5>Ice cream</h5></a>
                   <p>Glass in Swedish</p>
                 </div>
               </div>
 
-              <div class="col-md-2">
-                <a href="#" class="thumbnail">
-                  <img src="images/bakedbrie.jpg" alt="...">
-                </a>
+              <div class="col-md-2" id="th4">
+                <img src="images/bakedbrie.jpg" alt="...">
                 <div class="caption">
                   <a href="#"><h5>Baked Brie</h5></a>
                   <p>Yum</p>
@@ -164,7 +148,7 @@
                     </tr>
                   </table>
                   <a class="btn btn-default" href="#" role="button">Confirm Dish</a>
-                  <p style="text-align: right;">Total SEK: <span id="totalCost"></span>
+                  <p style="text-align: right;">Total SEK: <span id="dishCost"></span>
               </div>
             </div>
           </div>
@@ -176,7 +160,7 @@
         <div class="row" id="dinnerView" style="display: none">
           <div class="col-md-12" style="border: 3px solid black; border-top: none; background: rgba(255,255,157,.7)">
             <div class="col-md-6">
-              <h3>My dinner: <span id="numGuests"></span> people</h3>
+              <h3>My dinner: <span id="dinnerGuests"></span> people</h3>
             </div>
             <div class="col-md-6" style="padding-top: 1em;">
               <p style="text-align: right"><button class="btn btn-default" id="buttonBack">back to Select Dish</button></p>
@@ -304,8 +288,9 @@
     <script src="js/controllers/leftDishListController.js"></script>
     <script src="js/controllers/mainController.js"></script>
     <script src="js/controllers/selectDishController.js"></script>
+	<script src="js/controllers/dishInfoController.js"></script>
     <!-- do we need these? -->
-    <script src="js/view/exampleView.js"></script>
+    <!--<script src="js/view/exampleView.js"></script>-->
     <!-- <script src="js/view/exampleViewController.js"></script> -->
 
 </body>

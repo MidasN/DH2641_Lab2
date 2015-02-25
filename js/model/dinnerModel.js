@@ -3,19 +3,29 @@ var DinnerModel = function() {
 	var numGuests = 0;
 	var menu = [];
 	var observers = [];
+	var focusedId = 1;
 	
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 	//Can i save it ?
 
 	this.addObserver = function(observer){
-		this.observers.push(observer);
+		observers.push(observer);
 	}
 	
 	this.notifyObservers = function(obj) {
 		for(i=0; i < observers.length ; i++){
-			observers[i].update(obj);
+			observers[i].update();
 		}
+	}
+	
+	this.setFocusedId = function(newId){
+		focusedId = newId;
+		this.notifyObservers();
+	}
+	
+	this.getFocusedId = function(){
+		return focusedId;
 	}
 	
 	this.setNumberOfGuests = function(num) {
@@ -60,9 +70,11 @@ var DinnerModel = function() {
 		var index = 0;
 		
 		for(i = 0; i < menu.length; i++){
+			if(typeof menu[i] != 'undefined'){
 			for(j = 0; j < menu[i].ingredients.length; j++){
 				allIngredients[index] = menu[i].ingredients[j];
 				index += 1;
+			}
 			}
 		}
 		return allIngredients;
@@ -79,6 +91,17 @@ var DinnerModel = function() {
 		}
 				
 		return count;
+	}
+	
+	this.getDishCost2 = function(id) {
+		var cost = 0;
+		var dish = this.getDish(id);
+		
+		for(i=0; i<dish.ingredients.length; i++){
+			cost += dish.ingredients[i].price * numGuests;
+		}
+		
+		return cost;
 	}
 	
 	this.getDishCost = function(pos) {

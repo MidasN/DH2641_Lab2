@@ -1,4 +1,4 @@
-var DinnerOverviewView = function(view, model){
+var DinnerOverviewView = function(container, model){
 	this.starterimg = container.find("#starterimg");
 	this.starterName = container.find("#starterName");
 	this.startercost = container.find("#startercost");
@@ -9,10 +9,9 @@ var DinnerOverviewView = function(view, model){
 	this.dessertname = container.find("#dessertname");
 	this.dessertcost = container.find("#dessertcost");
 	this.totalCost = container.find("#totalCost");
-	this.numGuests = container.find("#numGuests");
+	this.dinnerGuests = document.getElementById("dinnerGuests");
 	 
-	this.numGuests.html(model.getNumberOfGuests());
-	
+	this.dinnerGuests.innerHTML = model.getNumberOfGuests();
 	this.starterName.html(model.getFullMenu()[0].name);
 	this.startercost.html(model.getDishCost(0));
 	this.mainname.html(model.getFullMenu()[1].name);
@@ -20,12 +19,14 @@ var DinnerOverviewView = function(view, model){
 	this.dessertname.html(model.getFullMenu()[2].name);
 	this.dessertcost.html(model.getDishCost(2));
 	this.totalCost.html(model.getTotalMenuPrice());
-	};
+	
+};
 
 var buttonBack = document.getElementById('buttonBack');
 
 buttonBack.onclick = function() {
     //hide
+	
     var dinnerView = document.getElementById('dinnerView');
     if (dinnerView.style.display !== 'none') {
         dinnerView.style.display = 'none';
@@ -53,6 +54,7 @@ buttonBack.onclick = function() {
     else {
         select.style.display = 'block';
     }
+	document.getElementById("leftDishListView").style.display = 'block';
 };
 
 var buttonPrint = document.getElementById('buttonPrint');

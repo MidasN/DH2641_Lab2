@@ -123,3 +123,13 @@ var ExampleView = function (container,model) {
 	 this.dessertinstructions.html(model.getSelectedDish('dessert').description);
  }
  
+ <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    Choose course
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Starter</a></li>
+                      <li><a href="#">Main</a></li>
+                      <li><a href="#">Dessert</a></li>
+                    </ul>
+ 
