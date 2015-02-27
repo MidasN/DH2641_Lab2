@@ -1,4 +1,5 @@
-var DinnerPreparationView = function(view, model){
+var DinnerPreparationView = function(container, model){
+	this.container = container;
 	this.numGuests = container.find("#numGuests");
 	 
 	this.starterimage = container.find("#starterimage");
@@ -26,37 +27,20 @@ var DinnerPreparationView = function(view, model){
 	this.starterinstructions.html(model.getSelectedDish('starter').description);
 	this.maininstructions.html(model.getSelectedDish('main dish').description);
 	this.dessertinstructions.html(model.getSelectedDish('dessert').description);
+	
+	this.update = function(){
+		this.numGuests.html(model.getNumberOfGuests());
+	 
+		this.startertitle.html(model.getSelectedDish('starter').name);
+		this.startertitle.html(model.getSelectedDish('starter').name);
+		this.maintitle.html(model.getSelectedDish('main dish').name);
+		this.desserttitle.html(model.getSelectedDish('dessert').name);
+	 
+		this.starterinstructions.html(model.getSelectedDish('starter').description);
+		this.maininstructions.html(model.getSelectedDish('main dish').description);
+		this.dessertinstructions.html(model.getSelectedDish('dessert').description);
+	}
+	
+	model.addObserver(this);
 };
 
-var button = document.getElementById('buttonBack');
-
-button.onclick = function() {
-    //hide
-    var dinnerView = document.getElementById('dinnerView');
-    if (dinnerView.style.display !== 'none') {
-        dinnerView.style.display = 'none';
-    }
-    var dinnerOverviewView = document.getElementById('dinnerOverviewView');
-    if (dinnerOverviewView.style.display !== 'none') {
-        dinnerOverviewView.style.display = 'none';
-    }
-    var dinnerPreparationView = document.getElementById('dinnerPreparationView');
-    if (dinnerPreparationView.style.display !== 'none') {
-        dinnerPreparationView.style.display = 'none';
-    }
-    //show
-    var dishView = document.getElementById('dishView')
-    if (dishView.style.display == 'none') {
-        dishView.style.display = 'block';
-    }
-    else {
-        dishView.style.display = 'block';
-    }
-    var select = document.getElementById('selectDishView')
-    if (select.style.display == 'none') {
-        select.style.display = 'block';
-    }
-    else {
-        select.style.display = 'block';
-    }
-};

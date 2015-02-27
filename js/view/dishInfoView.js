@@ -47,32 +47,3 @@ var DishInfoView = function(container, model){
 };
 
 
-/*
-buttonInfoBack.onclick = function() {
-    //hide
-    var dishInfoView = document.getElementById('dishInfoView');
-    if (dishInfoView.style.display !== 'none') {
-        dishInfoView.style.display = 'none';
-    }
-    var ingrList = document.getElementById('ingrList');
-    if (ingrList.style.display !== 'none') {
-        ingrList.style.display = 'none';
-    }
-    //show
-    var dishView = document.getElementById('dishView')
-    if (dishView.style.display == 'none') {
-        dishView.style.display = 'block';
-    }
-    else {
-        dishView.style.display = 'block';
-    }
-	document.getElementById('leftDishListView').style.display = 'block';
-    var select = document.getElementById('selectDishView')
-    if (select.style.display == 'none') {
-        select.style.display = 'block';
-    }
-    else {
-        select.style.display = 'block';
-    }
-};
-*/

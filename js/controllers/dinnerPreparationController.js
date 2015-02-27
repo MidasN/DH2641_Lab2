@@ -1,3 +1,4 @@
-var HomeViewController = function(view, model){
+var DinnerPreparationController = function(view, model){
+	
 	
 };

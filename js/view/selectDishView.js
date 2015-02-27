@@ -6,32 +6,27 @@ var SelectDishView = function(container, model){
 	this.typeDropDown = document.getElementById("typeDropDown");
 	this.search = document.getElementById("search");
 	
-	var dishIds = new Array(5);
-	
-	this.getDishIds = function(){
-		return dishIds;
-	}
-	
 	function loadDishesSelection(){
 		//Empty Selection
-		for(i=0; i<5; i++){
-			search.getElementsByTagName('a')[i].innerHTML = "";
-			search.getElementsByTagName('p')[i].innerHTML = "";
-			search.getElementsByTagName('img')[i].src= "";
-		}
+		search.innerHTML = "";
+	
 		var result = model.getAllDishes(typeDropDown.value, keyWords.value);
-		//Repopulate selection
-		for(i=0 ; i<5; i++){
-			if(i >= result.length){
-				break;
-			}
-			search.getElementsByTagName('a')[i].innerHTML = result[i].name;
-			search.getElementsByTagName('p')[i].innerHTML = result[i].description;
-			search.getElementsByTagName('img')[i].src="images/toast.jpg";
-			
-			dishIds[i] = result[i].id;
-		}
 		
+		for(i=0; i<result.length; i++){
+			var img = document.createElement("img");
+			img.setAttribute('id', result[i].id);
+			img.src = "images/toast.jpg";
+			
+			var name = document.createElement("a");
+			name.innerHTML = result[i].name;
+			
+			var description = document.createElement("p");
+			description.innerHTML = result[i].description;
+			
+			search.appendChild(img);
+			search.appendChild(name);
+			search.appendChild(description);
+		}
 	};
 	
 	this.loadDishSearch = loadDishesSelection;

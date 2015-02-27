@@ -13,15 +13,14 @@ var DinnerModel = function() {
 		observers.push(observer);
 	}
 	
-	this.notifyObservers = function(obj) {
-		for(i=0; i < observers.length ; i++){
+	this.notifyObservers = function(obj){
+		for(var i=0; i < observers.length ; i++){
 			observers[i].update();
 		}
 	}
 	
 	this.setFocusedId = function(newId){
 		focusedId = newId;
-		this.notifyObservers();
 	}
 	
 	this.getFocusedId = function(){

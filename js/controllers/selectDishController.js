@@ -5,45 +5,30 @@ var SelectDishController = function(view, model){
 		document.getElementById("dishInfoView").style.display = 'block';
 	};
 	
-	var result = model.getAllDishes(view.typeDropDown.value, view.keyWords.value);
 	
-	for(i=0; i<5;i++){
-		if(i >= result.length){
-			break;
-		}
-		
-		view.search.getElementsByTagName('img')[i].onclick = function(){
-			model.setFocusedId(view.getDishIds()[i]);
-			displayDishInfoView();
-			
-		};
-		
-		view.search.getElementsByTagName('a')[i].onclick = function(){
-			model.setFocusedId(view.getDishIds()[i]);
-			displayDishInfoView();
-		};
-	}
-
-	view.keyWordBtn.onclick = function(){
-		view.update();
-		
-		var result = model.getAllDishes(view.typeDropDown.value, view.keyWords.value);
-		
-		for(i=0; i<5;i++){
-		if(i >= result.length){
-			break;
-		}
-		
-		view.search.getElementsByTagName('img')[i].onclick = function(){
-			model.setFocusedId(view.getDishIds()[i]);
-			displayDishInfoView();
-			
-		};
-		
-		view.search.getElementsByTagName('a')[i].onclick = function(){
-			model.setFocusedId(view.getDishIds()[i]);
-			displayDishInfoView();
-		};
+	function loadSelectDishListeners(){
+	
+	var images = view.search.getElementsByTagName("img");
+		for(var i=0; i<images.length; i++){
+			var img = images[i];
+			img.onclick = function(){
+				model.setFocusedId(this.id);
+				model.notifyObservers();
+				displayDishInfoView();
+			};
 		}
 	};
+	
+	view.keyWordBtn.onclick = function(){
+		view.update();
+		loadSelectDishListeners();
+	};
+	
+	this.update = function(){
+		loadSelectDishListeners();
+	};
+	
+	loadSelectDishListeners();
+	
+	model.addObserver(this);
 };
